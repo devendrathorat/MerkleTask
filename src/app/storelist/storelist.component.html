@@ -1,0 +1,27 @@
+<div class="container">
+
+     
+        
+    <div class="row">
+        <div class="col-md-3" *ngFor="let val of storeData">
+
+            <div class="card" style="width: 18rem;padding:10px">
+                <img class="card-img-top" src="{{val.storeImg}}" alt="Card image cap" style="height:140px;">
+                <div class="card-body">
+                    <h5 class="card-title">{{val.storeName}}</h5>
+                    <p class="card-text">{{val.storeDesc}}</p>
+                       
+                        <p class="card-text">Location: {{val.storeAdress}}</p>
+                        <p class="card-text">Timing: {{val.storeTiming}}</p>
+                        <p class="card-text">Offer: {{val.Offer}}</p>
+                                
+                </div>
+
+                <div class="card-body">
+                    <button class="btn btn-primary" routerLink="/storeDetails/{{val.id}}">Details</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
